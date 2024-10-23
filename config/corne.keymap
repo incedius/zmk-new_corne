@@ -18,21 +18,21 @@
     behaviors {
         td0: Shit-DbTapCaps {
             compatible = "zmk,behavior-tap-dance";
-            //label = "Shit-DbTapCaps";
+            label = "Shit-DbTapCaps";
             #binding-cells = <0>;
             bindings = <&kp LEFT_SHIFT>, <&kp CAPS>;
         };
 
         td1: TabTabEsc {
             compatible = "zmk,behavior-tap-dance";
-            //label = "TabTabEsc";
+            label = "TabTabEsc";
             #binding-cells = <0>;
             bindings = <&kp TAB>, <&kp TAB>, <&kp ESC>;
         };
 
         hml: homewrow_mods_left {
             compatible = "zmk,behavior-hold-tap";
-            //label = "HOMEROW_MODS_LEFT_HAND";
+            label = "HOMEROW_MODS_LEFT_HAND";
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
@@ -42,7 +42,7 @@
 
         hmR: homewrow_mods_right {
             compatible = "zmk,behavior-hold-tap";
-            //label = "HOMEROW_MODS_RIGHT_HAND";
+            label = "HOMEROW_MODS_RIGHT_HAND";
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
@@ -52,7 +52,7 @@
 
         thumb: thumb {
             compatible = "zmk,behavior-hold-tap";
-            //label = "THUMB";
+            label = "THUMB";
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
@@ -61,7 +61,7 @@
 
         rgbknob: rgbknob {
             compatible = "zmk,behavior-sensor-rotate-var";
-            //label = "rgb knob";
+            label = "rgb knob";
             #sensor-binding-cells = <2>;
             bindings = <&rgb_ug>, <&rgb_ug>;
         };
@@ -108,7 +108,7 @@
                                                                                                        &kp ENTER
             >;
 
-            //label = "QWERTY";
+            label = "QWERTY";
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
@@ -129,7 +129,7 @@
                                                               &kp PRINTSCREEN
             >;
 
-            //label = "NUMBER";
+            label = "NUMBER";
             sensor-bindings = <&rgbknob RGB_BRI RGB_BRD>;
         };
 
@@ -150,7 +150,7 @@
                                                    &mkp LCLK
             >;
 
-            //label = "Fn";
+            label = "Fn";
             sensor-bindings = <&rgbknob RGB_EFF RGB_EFR>;
         };
 
@@ -164,7 +164,7 @@
             >;
 
             sensor-bindings = <&rgbknob RGB_SPI RGB_SPD>;
-            //label = "CONFIG";
+            label = "CONFIG";
         };
     };
 
