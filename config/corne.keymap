@@ -136,15 +136,24 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans  &kp EXCL      &kp AT        &kp HASH   &kp DLLR   &kp PRCNT    &mmv MOVE_UP     &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &kp BSPC
-&trans  &bt BT_CLR    &mkp LCLK     &mkp MCLK  &mkp RCLK  &mkp MB4     &mmv MOVE_DOWN   &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &kp BSLH  &kp GRAVE
-&trans  &out OUT_USB  &out OUT_BLE  &none      &none      &mkp MB5     &mmv MOVE_LEFT   &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC  &kp PIPE  &kp TILDE
-                      &trans        &trans     &trans     &kp SPACE    &mmv MOVE_RIGHT  &kp RET    &trans     &trans
-                                                                       &mkp LCLK
+&trans      &kp EXCL      &kp AT        &kp HASH      &kp DLLR      &kp PRCNT       &rgb_ug RGB_HUI  &kp CARET  &kp AMPS     &kp ASTRK   &kp LPAR  &kp RPAR  &kp BACKSLASH
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &rgb_ug RGB_HUD  &trans     &trans       &trans      &trans    &trans    &trans
+&trans      &out OUT_USB  &out OUT_BLE  &sys_reset    &bootloader   &trans          &rgb_ug RGB_SAD  &trans     &bootloader  &sys_reset  &trans    &trans    &trans
+                          &trans        &trans        &trans        &trans          &rgb_ug RGB_SAI  &trans     &trans       &trans
+                                                                                    &rgb_ug RGB_EFF
             >;
 
             label = "SYMBOL";
-            sensor-bindings = <&scroll_encoder>;
+            sensor-bindings = <&rgb_encoder>;
+        };
+    };
+
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+
+        OnePlusTwo {
+            if-layers = <1 2>;
+            then-layer = <3>;
         };
     };
 };
