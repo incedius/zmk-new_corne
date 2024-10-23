@@ -1,6 +1,6 @@
 layout: {qmk_keyboard: corne_rotated, qmk_layout: LAYOUT_split_3x6_3}
 layers:
-  Default:
+  QWERTY:
   - '&td1'
   - Q
   - W
@@ -41,15 +41,15 @@ layers:
   - {t: /, s: '?'}
   - $$mdi:apple-keyboard-shift$$
   - $$mdi:volume-off$$
-  - NUMBERS
-  - {t: '$$mdi:keyboard-space$$', h: FNMouse}
+  - NUMBER
+  - {t: '$$mdi:keyboard-space$$', h: FN}
   - {t: '$$mdi:keyboard-return$$', h: '$$mdi:apple-keyboard-option$$'}
   - $$mdi:arrow-right-bold$$
-  - {t: '$$mdi:keyboard-return$$', h: FNMouse}
+  - {t: '$$mdi:keyboard-return$$', h: FN}
   - $$mdi:keyboard-space$$
   - $$mdi:backspace-reverse-outline$$
   - {t: '$$mdi:keyboard-return$$', type: enter}
-  NUMBERS:
+  NUMBER:
   - {t: '`', s: '~'}
   - {t: '1', s: '!'}
   - {t: '2', s: '@'}
@@ -98,7 +98,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - PRINTSCREEN
-  FNMouse:
+  FN:
   - {t: '$$mdi:transfer$$', type: trans}
   - F1
   - F2
