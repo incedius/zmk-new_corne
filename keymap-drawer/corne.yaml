@@ -40,7 +40,7 @@ layers:
   - {t: ., s: '>'}
   - {t: /, s: '?'}
   - $$mdi:keyboard-esc$$
-  - $$mdi:keyboard-space$$
+  - $$mdi:volume-off$$
   - LGUI
   - lower
   - {t: '$$mdi:keyboard-space$$', h: '3'}
@@ -89,7 +89,7 @@ layers:
   - RGB BRD
   - END
   - PG DN
-  - $$mdi:volume-off$$
+  - RGB TOG
   - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
