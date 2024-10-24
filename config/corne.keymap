@@ -44,8 +44,9 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <100>;
+            tapping-term-ms = <200>;
             hold-trigger-key-positions = <7 8 9 10 11 12 20 21 22 23 24 25 33 34 35 36 37 38 45 44 46>;
+            flavor = "tap-preferred";
         };
 
         hmr: hmr {
@@ -54,8 +55,9 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <100>;
+            tapping-term-ms = <200>;
             hold-trigger-key-positions = <0 1 2 4 13 14 15 16 17 26 27 28 29 30 3 5 18 31 40 41 42>;
+            flavor = "tap-preferred";
         };
 
         mmv {
