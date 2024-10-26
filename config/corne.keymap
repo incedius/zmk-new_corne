@@ -13,9 +13,6 @@
 #define U_MS_L &mmv MOVE_LEFT
 #define U_MS_R &mmv MOVE_RIGHT
 
-&soft_off {
-};
-
 / {
     behaviors {
         td0: td0 {
@@ -162,10 +159,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans      &trans        &trans        &trans        &trans        &trans          &rgb_ug RGB_HUI  &trans     &trans       &trans      &trans  &trans  &trans
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &rgb_ug RGB_HUD  &trans     &trans       &trans      &trans  &trans  &trans
-&trans      &out OUT_USB  &out OUT_BLE  &sys_reset    &bootloader   &soft_off       &rgb_ug RGB_SAD  &soft_off  &bootloader  &sys_reset  &trans  &trans  &trans
-                          &trans        &trans        &trans        &trans          &rgb_ug RGB_SAI  &trans     &trans       &trans
+&trans      &trans        &trans        &trans        &trans        &trans          &rgb_ug RGB_HUI  &trans  &trans       &trans      &trans  &trans  &trans
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &rgb_ug RGB_HUD  &trans  &trans       &trans      &trans  &trans  &trans
+&trans      &out OUT_USB  &out OUT_BLE  &sys_reset    &bootloader   &trans          &rgb_ug RGB_SAD  &trans  &bootloader  &sys_reset  &trans  &trans  &trans
+                          &trans        &trans        &trans        &trans          &rgb_ug RGB_SAI  &trans  &trans       &trans
                                                                                     &rgb_ug RGB_EFF
             >;
 
