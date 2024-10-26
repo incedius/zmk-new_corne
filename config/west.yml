@@ -1,10 +1,10 @@
 manifest:
   remotes:
-    - name: urob
-      url-base: https://github.com/urob
+    - name: incedius
+      url-base: https://github.com/incedius
   projects:
     - name: zmk
-      remote: urob
+      remote: incedius
       revision: main
       import: app/west.yml
   self:
