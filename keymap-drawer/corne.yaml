@@ -43,11 +43,11 @@ layers:
   - $$mdi:volume-off$$
   - Number
   - {t: '$$mdi:keyboard-space$$', h: Fn}
-  - {t: '$$mdi:backspace-reverse-outline$$', h: '$$mdi:apple-keyboard-option$$'}
+  - {t: '$$mdi:backspace-reverse-outline$$', h: '$$mdi:apple-keyboard-command$$'}
   - $$mdi:arrow-right-bold$$
   - {t: '$$mdi:keyboard-return$$', h: Fn}
   - {t: '$$mdi:keyboard-space$$', h: Number}
-  - {t: '$$mdi:backspace-reverse-outline$$', h: RIGHT GUI}
+  - {t: '$$mdi:backspace-reverse-outline$$', h: '$$mdi:apple-keyboard-option$$'}
   - {t: '$$mdi:keyboard-return$$', type: enter}
   Number:
   - {t: '`', s: '~'}
