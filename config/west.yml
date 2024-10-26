@@ -2,16 +2,11 @@ manifest:
   remotes:
     - name: incedius
       url-base: https://github.com/incedius
-    - name: gpeye
-      url-base: https://github.com/GPeye
   projects:
     - name: zmk
       remote: incedius
       revision: main
       import: app/west.yml
-    - name: hammerbeam-slideshow
-      remote: gpeye
-      revision: main
   self:
     path: config
 
