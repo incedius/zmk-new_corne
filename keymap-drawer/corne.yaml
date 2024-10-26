@@ -179,9 +179,9 @@ layers:
   - OUT BLE
   - {t: '$$mdi:backup-restore$$', type: bootloader}
   - $$mdi:progress-download$$
-  - '&soft_off'
+  - {t: '$$mdi:transfer$$', type: trans}
   - RGB SAD
-  - '&soft_off'
+  - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:progress-download$$
   - {t: '$$mdi:backup-restore$$', type: bootloader}
   - {t: '$$mdi:transfer$$', type: trans}
