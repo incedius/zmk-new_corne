@@ -106,7 +106,7 @@
 &td1       &kp Q  &kp W       &kp E  &kp R        &kp T                  &kp UP_ARROW     &kp Y        &kp U        &kp I                 &kp O    &kp P     &kp BSPC
 &td0       &kp A  &kp S       &kp D  &kp F        &kp G                  &kp DOWN_ARROW   &kp H        &kp J        &kp K                 &kp L    &kp SEMI  &kp SQT
 &kp LCTRL  &kp Z  &kp X       &kp C  &kp V        &kp B                  &kp LEFT_ARROW   &kp N        &kp M        &kp COMMA             &kp DOT  &kp FSLH  &kp RIGHT_SHIFT
-                  &kp C_MUTE  &mo 1  &lt 2 SPACE  &hm LEFT_GUI DELETE    &kp RIGHT_ARROW  &lt 2 ENTER  &lt 1 SPACE  &hm RIGHT_ALT DELETE
+                  &kp C_MUTE  &mo 1  &lt 3 SPACE  &hm LEFT_GUI DELETE    &kp RIGHT_ARROW  &lt 2 ENTER  &lt 1 SPACE  &hm RIGHT_ALT DELETE
                                                                          &kp ENTER
             >;
 
@@ -124,15 +124,25 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp GRAVE  &kp N1  &kp N2           &kp N3  &kp N4  &kp N5    &kp PAGE_UP      &kp N6     &kp N7            &kp N8             &kp N9    &kp N0          &trans
-&trans     &trans  &trans           &trans  &trans  &trans    &kp PAGE_DOWN    &kp MINUS  &kp LEFT          &kp UP             &kp DOWN  &kp RIGHT       &kp BACKSLASH
-&trans     &trans  &trans           &trans  &trans  &trans    &kp HOME         &kp EQUAL  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans    &kp SCROLLLOCK  &kp PAUSE_BREAK
-                   &rgb_ug RGB_TOG  &trans  &trans  &trans    &kp END          &trans     &trans            &trans
-                                                              &kp PRINTSCREEN
+&kp GRAVE  &kp N1  &kp N2           &kp N3            &kp N4             &kp N5    &kp PAGE_UP      &kp N6     &kp N7    &kp N8    &kp N9     &kp N0          &trans
+&trans     &trans  &trans           &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans    &kp PAGE_DOWN    &kp MINUS  &kp LEFT  &kp UP    &kp RIGHT  &trans          &kp BACKSLASH
+&trans     &trans  &trans           &trans            &trans             &trans    &kp HOME         &kp EQUAL  &trans    &kp DOWN  &trans     &kp SCROLLLOCK  &kp PAUSE_BREAK
+                   &rgb_ug RGB_TOG  &trans            &trans             &trans    &kp END          &trans     &trans    &trans
+                                                                                   &kp PRINTSCREEN
             >;
 
             label = "NUMBER";
             sensor-bindings = <&rgb_encoder>;
+        };
+
+        SYMBOLS {
+            bindings = <
+&trans  &kp EXCLAMATION  &kp AT_SIGN  &kp HASH  &kp DOLLAR  &kp PERCENT    &trans  &kp CARET  &kp AMPERSAND  &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans
+&trans  &trans           &trans       &trans    &trans      &trans         &trans  &trans     &trans         &trans        &trans                &trans                 &trans
+&trans  &trans           &trans       &trans    &trans      &trans         &trans  &trans     &trans         &trans        &trans                &trans                 &trans
+                         &trans       &trans    &trans      &trans         &trans  &trans     &trans         &trans
+                                                                           &trans
+            >;
         };
 
         Fn {
@@ -149,8 +159,8 @@
             sensor-bindings = <&scroll_encoder>;
         };
 
-        raise_layer {
-            display-name = "SYMBOL";
+        CONFIG {
+            display-name = "CONFIG";
 
             // -----------------------------------------------------------------------------------------
             // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
@@ -166,7 +176,6 @@
                                                                                     &rgb_ug RGB_EFF
             >;
 
-            label = "SYMBOL";
             sensor-bindings = <&rgb_encoder>;
         };
     };
@@ -175,8 +184,18 @@
         compatible = "zmk,conditional-layers";
 
         OnePlusTwo {
+            if-layers = <1 3>;
+            then-layer = <4>;
+        };
+
+        Again {
             if-layers = <1 2>;
-            then-layer = <3>;
+            then-layer = <4>;
+        };
+
+        again1 {
+            if-layers = <2 3>;
+            then-layer = <4>;
         };
     };
 };
