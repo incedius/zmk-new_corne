@@ -89,14 +89,7 @@
         tap-ms = <30>;
     };
 
-    combos {
-        compatible = "zmk,combos";
-
-        AnotherConfigTrigger {
-            bindings = <&mo 4>;
-            key-positions = <41 45>;
-        };
-    };
+    combos { compatible = "zmk,combos"; };
 
     keymap {
         compatible = "zmk,keymap";
@@ -195,17 +188,17 @@
     conditional_layers {
         compatible = "zmk,conditional-layers";
 
-        OnePlusTwo {
+        ConfigTrigger1 {
             if-layers = <1 3>;
             then-layer = <4>;
         };
 
-        Again {
+        ConfigTrigger2 {
             if-layers = <1 2>;
             then-layer = <4>;
         };
 
-        again1 {
+        ConfigTrigger3 {
             if-layers = <2 3>;
             then-layer = <4>;
         };
