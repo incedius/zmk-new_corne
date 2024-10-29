@@ -41,9 +41,9 @@ layers:
   - {t: /, s: '?'}
   - $$mdi:apple-keyboard-shift$$
   - $$mdi:volume-off$$
-  - Number
+  - {t: '$$mdi:apple-keyboard-option$$', h: '$$mdi:apple-keyboard-command$$'}
   - {t: '$$mdi:keyboard-space$$', h: Fn}
-  - {t: '$$mdi:backspace-reverse-outline$$', h: '$$mdi:apple-keyboard-command$$'}
+  - {t: '$$mdi:backspace-reverse-outline$$', h: Number}
   - $$mdi:arrow-right-bold$$
   - {t: '$$mdi:keyboard-return$$', h: SYMBOLS}
   - {t: '$$mdi:keyboard-space$$', h: Number}
@@ -90,9 +90,9 @@ layers:
   - SCROLLLOCK
   - PAUSE BREAK
   - RGB TOG
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
   - END
   - {t: '$$mdi:transfer$$', type: trans}
   - {type: held alternate}
