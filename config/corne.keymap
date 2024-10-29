@@ -89,6 +89,15 @@
         tap-ms = <30>;
     };
 
+    combos {
+        compatible = "zmk,combos";
+
+        AnotherConfigTrigger {
+            bindings = <&mo 4>;
+            key-positions = <41 45>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
