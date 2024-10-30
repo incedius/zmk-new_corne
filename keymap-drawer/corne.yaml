@@ -49,6 +49,55 @@ layers:
   - {t: '$$mdi:keyboard-space$$', h: Number}
   - {t: '$$mdi:backspace-reverse-outline$$', h: '$$mdi:apple-keyboard-option$$'}
   - {t: '$$mdi:keyboard-return$$', type: enter}
+  ColemakDH:
+  - {t: '$$mdi:transfer$$', type: trans}
+  - Q
+  - W
+  - F
+  - P
+  - B
+  - {t: '$$mdi:transfer$$', type: trans}
+  - J
+  - L
+  - U
+  - Y
+  - {t: ;, s: ':'}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - A
+  - R
+  - S
+  - T
+  - G
+  - {t: '$$mdi:transfer$$', type: trans}
+  - M
+  - N
+  - E
+  - I
+  - O
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - Z
+  - X
+  - C
+  - D
+  - V
+  - {t: '$$mdi:transfer$$', type: trans}
+  - K
+  - H
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
   Number:
   - {t: '`', s: '~'}
   - {t: '1', s: '!'}
@@ -202,9 +251,9 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: default, h: toggle}
   - RGB HUI
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: ColemakDH, h: toggle}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
