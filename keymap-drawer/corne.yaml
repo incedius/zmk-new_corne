@@ -251,9 +251,9 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: ColemakDH, h: toggle}
+  - {t: default, h: toggle}
   - RGB HUI
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: ColemakDH, h: toggle}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
