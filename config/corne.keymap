@@ -89,7 +89,15 @@
         tap-ms = <30>;
     };
 
-    combos { compatible = "zmk,combos"; };
+    combos {
+        compatible = "zmk,combos";
+
+        Paste {
+            bindings = <&kp C_AC_PASTE>;
+            key-positions = <26 30>;
+            layers = <1>;
+        };
+    };
 
     keymap {
         compatible = "zmk,keymap";
