@@ -294,3 +294,7 @@ layers:
   - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
   - RGB EFF
+combos:
+- p: [26, 30]
+  k: AC PASTE
+  l: [ColemakDH]
