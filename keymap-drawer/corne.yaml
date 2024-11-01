@@ -126,10 +126,10 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: \, s: '|'}
   - {t: '$$mdi:transfer$$', type: trans}
-  - UNDO
-  - CUT
-  - COPY
-  - PASTE
+  - Ctl+ Z
+  - Ctl+ X
+  - Ctl+ C
+  - Ctl+ V
   - {t: '$$mdi:transfer$$', type: trans}
   - HOME
   - {t: '=', s: +}
@@ -175,10 +175,10 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - '|'
   - {t: '$$mdi:transfer$$', type: trans}
-  - UNDO
-  - CUT
-  - COPY
-  - PASTE
+  - Ctl+ Z
+  - Ctl+ X
+  - Ctl+ C
+  - Ctl+ V
   - {t: '$$mdi:transfer$$', type: trans}
   - HOME
   - +
@@ -187,7 +187,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - RGB TOG
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
