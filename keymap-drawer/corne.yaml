@@ -126,10 +126,10 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: \, s: '|'}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - UNDO
+  - CUT
+  - COPY
+  - PASTE
   - {t: '$$mdi:transfer$$', type: trans}
   - HOME
   - {t: '=', s: +}
@@ -175,10 +175,10 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - '|'
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - UNDO
+  - CUT
+  - COPY
+  - PASTE
   - {t: '$$mdi:transfer$$', type: trans}
   - HOME
   - +
@@ -294,7 +294,3 @@ layers:
   - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
   - RGB EFF
-combos:
-- p: [26, 30]
-  k: AC PASTE
-  l: [ColemakDH]
