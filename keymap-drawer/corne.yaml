@@ -197,7 +197,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - PRINTSCREEN
   Fn:
-  - {t: '$$mdi:transfer$$', type: trans}
+  - Alt+ $$mdi:keyboard-tab$$
   - F1
   - F2
   - F3
