@@ -41,7 +41,7 @@ layers:
   - {t: /, s: '?'}
   - '&shiftCaps'
   - $$mdi:volume-off$$
-  - {t: '$$mdi:keyboard-return$$', h: '$$mdi:apple-keyboard-command$$'}
+  - '&guiLayer'
   - {t: '$$mdi:keyboard-space$$', h: Number}
   - {t: '$$mdi:backspace-reverse-outline$$', h: Fn}
   - $$mdi:arrow-right-bold$$
