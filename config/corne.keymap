@@ -61,6 +61,13 @@
             flavor = "tap-unless-interrupted";
         };
 
+        guiLayer: guiLayer {
+            compatible = "zmk,behavior-tap-dance";
+            label = "GUILAYER";
+            #binding-cells = <0>;
+            bindings = <&mo 3>, <&kp LEFT_GUI>;
+        };
+
         mmv {
             acceleration-exponent = <1>;      // 1
             time-to-max-speed-ms = <900>;    // 40
@@ -105,11 +112,11 @@
             //                                                      enter
 
             bindings = <
-&tabEsc         &kp Q  &kp W       &kp E               &kp R        &kp T           &kp UP_ARROW     &kp Y                  &kp U        &kp I                 &kp O    &kp P     &kp BSPC
-&kp LEFT_SHIFT  &kp A  &kp S       &kp D               &kp F        &kp G           &kp DOWN_ARROW   &kp H                  &kp J        &kp K                 &kp L    &kp SEMI  &kp SQT
-&kp LCTRL       &kp Z  &kp X       &kp C               &kp V        &kp B           &kp LEFT_ARROW   &kp N                  &kp M        &kp COMMA             &kp DOT  &kp FSLH  &shiftCaps
-                       &kp C_MUTE  &hm LEFT_GUI ENTER  &lt 2 SPACE  &lt 4 DELETE    &kp RIGHT_ARROW  &hm RIGHT_SHIFT ENTER  &lt 3 SPACE  &hm RIGHT_ALT DELETE
-                                                                                    &kp ENTER
+&tabEsc         &kp Q  &kp W       &kp E      &kp R        &kp T           &kp UP_ARROW     &kp Y                  &kp U        &kp I                 &kp O    &kp P     &kp BSPC
+&kp LEFT_SHIFT  &kp A  &kp S       &kp D      &kp F        &kp G           &kp DOWN_ARROW   &kp H                  &kp J        &kp K                 &kp L    &kp SEMI  &kp SQT
+&kp LCTRL       &kp Z  &kp X       &kp C      &kp V        &kp B           &kp LEFT_ARROW   &kp N                  &kp M        &kp COMMA             &kp DOT  &kp FSLH  &shiftCaps
+                       &kp C_MUTE  &guiLayer  &lt 2 SPACE  &lt 4 DELETE    &kp RIGHT_ARROW  &hm RIGHT_SHIFT ENTER  &lt 3 SPACE  &hm RIGHT_ALT DELETE
+                                                                           &kp ENTER
             >;
 
             label = "QWERTY";
