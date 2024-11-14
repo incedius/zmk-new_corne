@@ -2,22 +2,16 @@ manifest:
   remotes:
     - name: incedius
       url-base: https://github.com/incedius
-    - name: lesshonor
-      url-base: https://github.com/lesshonor
     - name: m165437
       url-base: https://github.com/M165437
   projects:
-    - name: eyelash-corne-module
-      remote: lesshonor
-      revision: studio
-      clone-depth: 1
     - name: zmk
       remote: incedius
       revision: main
       import: app/west.yml
-    - name: nice-view-gem #new entry
-      remote: m165437 #new entry
-      revision: main #new entry
+    - name: nice-view-gem
+      remote: m165437
+      revision: main
   self:
     path: config
 
