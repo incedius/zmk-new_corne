@@ -114,7 +114,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - Ctl+ A
-  - {t: '$$mdi:transfer$$', type: trans}
+  - Ctl+ S
   - {t: '[', s: '{'}
   - {t: ']', s: '}'}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -163,7 +163,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - Ctl+ A
-  - {t: '$$mdi:transfer$$', type: trans}
+  - Ctl+ S
   - '{'
   - '}'
   - {t: '$$mdi:transfer$$', type: trans}
