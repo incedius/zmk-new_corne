@@ -172,10 +172,10 @@
         Fn {
             display-name = "Fn";
             bindings = <
-&kp LA(TAB)  &kp F1  &kp F2     &kp F3  &kp F4  &kp F5     &mmv MOVE_UP     &kp F6     &kp F7    &kp F8    &kp F9     &kp F10         &trans
-&trans       &trans  &trans     &trans  &trans  &kp F11    &mmv MOVE_DOWN   &mkp RCLK  &kp LEFT  &kp UP    &kp RIGHT  &trans          &trans
-&trans       &trans  &trans     &trans  &trans  &kp F12    &mmv MOVE_LEFT   &mkp MB4   &mkp MB5  &kp DOWN  &trans     &kp SCROLLLOCK  &kp PAUSE_BREAK
-                     &mkp MCLK  &trans  &trans  &trans     &mmv MOVE_RIGHT  &trans     &trans    &trans
+&kp LA(TAB)  &kp F1  &kp F2     &kp F3  &kp F4  &kp F5     &trans   &kp F6     &kp F7    &kp F8    &kp F9     &kp F10         &trans
+&trans       &trans  &trans     &trans  &trans  &kp F11    &trans   &mkp RCLK  &kp LEFT  &kp UP    &kp RIGHT  &trans          &trans
+&trans       &trans  &trans     &trans  &trans  &kp F12    &trans   &mkp MB4   &mkp MB5  &kp DOWN  &trans     &kp SCROLLLOCK  &kp PAUSE_BREAK
+                     &mkp MCLK  &trans  &trans  &trans     &trans   &trans     &trans    &trans
                                                            &mkp LCLK
             >;
 
