@@ -1,6 +1,6 @@
 layout: {qmk_keyboard: corne_rotated, layout_name: LAYOUT_split_3x6_3}
 layers:
-  default:
+  QWERTY:
   - '&tabEsc'
   - Q
   - W
@@ -42,8 +42,8 @@ layers:
   - '&shiftCaps'
   - $$mdi:volume-off$$
   - '&guiLayer'
-  - {t: '$$mdi:keyboard-space$$', h: Number}
-  - {t: '$$mdi:backspace-reverse-outline$$', h: Fn}
+  - {t: '$$mdi:keyboard-space$$', h: NUMBER}
+  - {t: '$$mdi:backspace-reverse-outline$$', h: FN}
   - $$mdi:arrow-right-bold$$
   - {t: '$$mdi:keyboard-return$$', h: '$$mdi:apple-keyboard-shift$$'}
   - {t: '$$mdi:keyboard-space$$', h: SYMBOLS}
@@ -98,7 +98,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  Number:
+  NUMBER:
   - {t: '`', s: '~'}
   - {t: '1', s: '!'}
   - {t: '2', s: '@'}
@@ -196,7 +196,7 @@ layers:
   - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
   - PRINTSCREEN
-  Fn:
+  FN:
   - Alt+ $$mdi:keyboard-tab$$
   - F1
   - F2
@@ -251,7 +251,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: default, h: toggle}
+  - {t: QWERTY, h: toggle}
   - RGB HUI
   - {t: ColemakDH, h: toggle}
   - {t: '$$mdi:transfer$$', type: trans}
