@@ -9,21 +9,21 @@
     behaviors {
         shiftCaps: shiftCaps { //same as td0
             compatible = "zmk,behavior-tap-dance";
-            label = "SHIFTCAPS";
+            display-name = "SHIFTCAPS";
             #binding-cells = <0>;
             bindings = <&kp LEFT_SHIFT>, <&kp CAPS>;
         };
 
         tabEsc: tabEsc {
             compatible = "zmk,behavior-tap-dance";
-            label = "TABESC";
+            display-name = "TABESC";
             #binding-cells = <0>;
             bindings = <&kp TAB>, <&kp ESC>;
         };
 
         hm: hm {
             compatible = "zmk,behavior-hold-tap";
-            label = "HM";
+            display-name = "HM";
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
@@ -33,7 +33,7 @@
 
         guiLayer: guiLayer {
             compatible = "zmk,behavior-tap-dance";
-            label = "GUILAYER";
+            display-name = "GUILAYER";
             #binding-cells = <0>;
             bindings = <&mo 3>, <&kp LEFT_GUI>;
         };
@@ -120,14 +120,35 @@
 
         layer_4 {
             display-name = "Reserved";
+            bindings = <
+            &trans  &trans  &trans  &trans  &trans  &trans                              &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+            &trans  &trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans
+            &trans  &trans  &trans  &trans  &trans  &trans      &trans                  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+                                    &trans  &trans  &trans                                                      &trans  &trans  &trans
+            >;
+            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
 
         layer_5 {
             display-name = "Reserved";
+            bindings = <
+            &trans  &trans  &trans  &trans  &trans  &trans                              &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+            &trans  &trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans
+            &trans  &trans  &trans  &trans  &trans  &trans      &trans                  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+                                    &trans  &trans  &trans                                                      &trans  &trans  &trans
+            >;
+            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
 
         layer_6 {
             display-name = "Reserved";
+            bindings = <
+            &trans  &trans  &trans  &trans  &trans  &trans                              &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+            &trans  &trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans
+            &trans  &trans  &trans  &trans  &trans  &trans      &trans                  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+                                    &trans  &trans  &trans                                                      &trans  &trans  &trans
+            >;
+            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
     };
 };
