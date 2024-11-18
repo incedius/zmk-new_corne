@@ -146,7 +146,7 @@
         };
 
         layer_4 {
-            display-name = "Reserved";
+            status = "reserved";
             bindings = <
             &trans  &trans  &trans  &trans  &trans  &trans                              &trans                  &trans  &trans  &trans  &trans  &trans  &trans
             &trans  &trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans
@@ -157,7 +157,7 @@
         };
 
         layer_5 {
-            display-name = "Reserved";
+            status = "reserved";
             bindings = <
             &trans  &trans  &trans  &trans  &trans  &trans                              &trans                  &trans  &trans  &trans  &trans  &trans  &trans
             &trans  &trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans
@@ -168,7 +168,7 @@
         };
 
         layer_6 {
-            display-name = "Reserved";
+            status = "reserved";
             bindings = <
             &trans  &trans  &trans  &trans  &trans  &trans                              &trans                  &trans  &trans  &trans  &trans  &trans  &trans
             &trans  &trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans
@@ -176,6 +176,22 @@
                                     &trans  &trans  &trans                                                      &trans  &trans  &trans
             >;
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
+        };
+    };s
+
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+        ConfigTrigger1 {
+            if-layers = <2 4>;
+            then-layer = <5>;
+        };
+        ConfigTrigger2 {
+            if-layers = <2 3>;
+            then-layer = <5>;
+        };
+        ConfigTrigger3 {
+            if-layers = <3 4>;
+            then-layer = <5>;
         };
     };
 };
