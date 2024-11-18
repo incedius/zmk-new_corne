@@ -10,6 +10,37 @@
 
 / {
     behaviors {
+        shiftCaps: shiftCaps { //same as td0
+            compatible = "zmk,behavior-tap-dance";
+            label = "SHIFTCAPS";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_SHIFT>, <&kp CAPS>;
+        };
+
+        tabEsc: tabEsc {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TABESC";
+            #binding-cells = <0>;
+            bindings = <&kp TAB>, <&kp ESC>;
+        };
+
+        hm: hm {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HM";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "hold-preferred";
+        };
+
+        guiLayer: guiLayer {
+            compatible = "zmk,behavior-tap-dance";
+            label = "GUILAYER";
+            #binding-cells = <0>;
+            bindings = <&mo 3>, <&kp LEFT_GUI>;
+        };
+
         td0: td0 {
             compatible = "zmk,behavior-tap-dance";
             display-name = "Shift/Caps Lock Tap Dance";
@@ -88,6 +119,18 @@
                                 &trans      &trans      &trans                                                               &trans       &trans     &trans
             >;
             sensor-bindings = <&scroll_encoder>;
+        };
+
+        layer_4 {
+            display-name = "Reserved";
+        };
+
+        layer_5 {
+            display-name = "Reserved";
+        };
+
+        layer_6 {
+            display-name = "Reserved";
         };
     };
 };
