@@ -76,46 +76,73 @@
 
         default_layer {
             display-name = "QWERTY";
+            
             bindings = <
-&kp TAB    &kp Q  &kp W      &kp E     &kp R  &kp T                               &kp UP               &kp Y        &kp U  &kp I      &kp O    &kp P     &kp BSPC
-&td0       &kp A  &kp S      &kp D     &kp F  &kp G                    &kp RIGHT  &kp ENTER  &kp LEFT  &kp H        &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LCTRL  &kp Z  &kp X      &kp C     &kp V  &kp B       &kp SPACE               &kp DOWN             &kp N        &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp ESC
-                             &kp LGUI  &mo 1  &lt 3 SPACE                                              &lt 3 ENTER  &mo 2  &kp RALT
+            &tabEsc    &kp Q  &kp W      &kp E     &kp R  &kp T                               &kp UP               &kp Y        &kp U  &kp I      &kp O    &kp P     &kp BSPC
+     &kp LEFT_SHIFT    &kp A  &kp S      &kp D     &kp F  &kp G                    &kp RIGHT  &kp ENTER  &kp LEFT  &kp H        &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
+            &kp LCTRL  &kp Z  &kp X      &kp C     &kp V  &kp B       &kp C_MUTE              &kp DOWN             &kp N        &kp M  &kp COMMA  &kp DOT  &kp FSLH  &shiftCaps
+                            &guiLayer  &lt 2 SPACE  &lt 4 DELETE                                                   &hm RIGHT_SHIFT ENTER  &lt 3 SPACE  &hm RIGHT_ALT DELETE
             >;
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
 
-        lower_layer {
+        ColemakDH {
+            display-name = "ColemakDH";
+
+            bindings = <
+            &trans  &kp Q  &kp W   &kp F   &kp P   &kp B                              &trans                  &kp J   &kp L   &kp U   &kp Y   &kp SEMI  &trans
+            &trans  &kp A  &kp R   &kp S   &kp T   &kp G                      &trans  &trans  &trans          &kp M   &kp N   &kp E   &kp I   &kp O  &trans
+            &trans  &kp Z  &kp X   &kp C   &kp D   &kp V      &trans                  &trans                  &kp K   &kp H  &trans  &trans  &trans  &trans
+                                    &trans  &trans  &trans                                                      &trans  &trans  &trans
+            >;
+        };
+
+        Number {
             display-name = "NUMBER";
             bindings = <
-         &trans  &kp N1           &kp N2          &kp N3        &kp N4        &kp N5                                         &mmv MOVE_UP                &kp N6           &kp N7           &kp N8           &kp N9           &kp N0    &kp BSPC
-&trans  &bt BT_CLR_ALL   &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3                           &mmv MOVE_RIGHT  &mkp LCLK    &mmv MOVE_LEFT &kp LEFT         &kp DOWN         &kp UP           &kp RIGHT        &kp HOME  &kp PG_UP
-         &trans  &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &trans        &trans        &rgb_ug RGB_EFF &kp C_MUTE                     &mmv MOVE_DOWN              &rgb_ug RGB_EFR  &rgb_ug RGB_SPI  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &kp END   &kp PG_DN
-                                                  &trans        &trans        &trans                                                                     &kp INS          &kp DEL          &trans
+            &kp GRAVE  &kp N1           &kp N2          &kp N3              &kp N4              &kp N5                                                   &kp PAGE_UP                        &kp N6           &kp N7           &kp N8           &kp N9           &kp N0    &trans
+            &trans     &kp LC(A)        &trans          &kp LEFT_BRACKET    &kp RIGHT_BRACKET   &trans                                    &kp HOME       &kp PRINTSCREEN    &kp END         &kp MINUS  &kp LEFT  &kp UP    &kp RIGHT  &trans          &kp BACKSLASH
+            &trans     &kp LC(Z)        &kp LC(X)       &kp LC(C)           &kp LC(V)           &trans      &rgb_ug RGB_TOG                              &kp PAGE_DOWN                      &kp EQUAL  &trans    &kp DOWN  &trans     &kp SCROLLLOCK  &kp PAUSE_BREAK
+                                                  &trans        &trans        &trans                                                                                                        &trans     &trans    &trans
             >;
-            sensor-bindings = <&scroll_encoder>;
+            sensor-bindings = <&rgb_encoder>;
         };
 
-        raise_layer {
+        SYMBOLS {
             display-name = "SYMBOL";
             bindings = <
-&trans  &kp EXCL      &kp AT        &kp HASH   &kp DLLR   &kp PRCNT                            &mmv MOVE_UP                &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &kp BSPC
-&trans  &bt BT_CLR    &mkp LCLK     &mkp MCLK  &mkp RCLK  &mkp MB4            &mmv MOVE_RIGHT  &mkp LCLK    &mmv MOVE_LEFT &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &kp BSLH  &kp GRAVE
-&trans  &out OUT_USB  &out OUT_BLE  &none      &none      &mkp MB5  &trans                     &mmv MOVE_DOWN              &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC  &kp PIPE  &kp TILDE
-                                    &trans     &trans     &kp SPACE                                                        &kp RET    &trans     &trans
+&kp TILDE  &kp EXCLAMATION  &kp AT_SIGN      &kp HASH        &kp DOLLAR       &kp PERCENT                                               &kp PAGE_UP                    &kp CARET  &kp AMPERSAND  &kp ASTERISK    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans
+&trans     &kp LC(A)        &trans           &kp LEFT_BRACE  &kp RIGHT_BRACE  &trans                                     &kp HOME       &kp PRINTSCREEN    &kp END     &kp UNDER  &kp LEFT       &kp UP_ARROW    &kp RIGHT             &trans                 &kp PIPE
+&trans     &kp LC(Z)        &kp LC(X)        &kp LC(C)       &kp LC(V)        &trans       &rgb_ug RGB_TOG                              &kp PAGE_DOWN                  &kp PLUS   &trans         &kp DOWN_ARROW  &trans                &trans                 &trans
+                                    &trans     &trans     &trans                                                                               &trans   &trans     &trans
             >;
-            sensor-bindings = <&scroll_encoder>;
+
+            sensor-bindings = <&rgb_encoder>;
         };
 
-        layer_3 {
+        Fn {
             display-name = "Fn";
             bindings = <
-&trans  &kp F1      &kp F2      &kp F3       &kp F4     &kp F5                                   &mmv MOVE_UP                &kp F6       &kp F7     &kp F8       &kp F9      &kp F10          &kp F11
-&trans  &trans      &mkp LCLK   &mkp MCLK    &mkp RCLK  &mkp MB4                &mmv MOVE_RIGHT  &mkp LCLK    &mmv MOVE_LEFT &bootloader  &mkp LCLK  &mkp MCLK    &mkp RCLK   &kp PRINTSCREEN  &kp F12
-&trans  &sys_reset  &trans      &bootloader  &trans     &mkp MB5  &kp C_MUTE                     &mmv MOVE_DOWN              &trans       &trans     &bootloader  &sys_reset  &kp SCROLLLOCK   &kp PAUSE_BREAK
+&kp LA(TAB)  &kp F1  &kp F2     &kp F3  &kp F4  &kp F5                                  &mmv MOVE_UP                &kp F6     &kp F7    &kp F8    &kp F9     &kp F10         &trans
+&trans       &trans  &trans     &trans  &trans  &kp F11                &mmv MOVE_RIGHT  &mkp LCLK    &mmv MOVE_LEFT &mkp RCLK  &kp LEFT  &kp UP    &kp RIGHT  &trans          &trans
+&trans       &trans  &trans     &trans  &trans  &kp F12  &mkp MCLK                    &mmv MOVE_DOWN                &mkp MB4   &mkp MB5  &kp DOWN  &trans     &kp SCROLLLOCK  &kp PAUSE_BREAK
                                 &trans      &trans      &trans                                                               &trans       &trans     &trans
             >;
-            sensor-bindings = <&scroll_encoder>;
+            sensor-bindings = <&rgb_encoder>;
+        };
+
+        CONFIG {
+            display-name = "CONFIG";
+            
+            bindings = <
+&trans      &trans        &trans        &trans        &trans        &to 0                                       &rgb_ug RGB_HUI                         &to 1   &trans       &trans      &trans  &trans  &trans
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4           &rgb_ug RGB_SAD      &rgb_ug RGB_EFF     &rgb_ug RGB_SAI     &trans  &trans       &trans      &trans  &trans  &trans
+&trans      &out OUT_USB  &out OUT_BLE  &sys_reset    &bootloader   &trans       &trans                         &rgb_ug RGB_HUD                         &trans  &bootloader  &sys_reset  &trans  &trans  &trans
+                                        &trans        &trans        &trans                                                                              &trans  &trans       &trans
+                                                                                                        
+            >;
+
+            sensor-bindings = <&rgb_encoder>;
         };
 
         layer_4 {
