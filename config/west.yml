@@ -6,23 +6,15 @@ manifest:
       # See:
       # - https://zmk.dev/docs/features/modules
       # - https://docs.zephyrproject.org/3.5.0/develop/west/manifest.html#projects
-    - name: petejohanson
-      url-base: https://github.com/petejohanson
-    - name: lesshonor
-      url-base: https://github.com/lesshonor
     - name: m165437
       url-base: https://github.com/M165437
   projects:
-    - name: eyelash-corne-module
-      remote: lesshonor
-      revision: studio
-      clone-depth: 1
+    - name: eyelash_corne
+      url: https://github.com/a741725193/zmk-new_corne
+      revision: main
     - name: zmk
-      # WARNING: This mouse support branch is EXPERIMENTAL and may break at any time!
-      # petejohanson + feat/pointers-move-scroll is more stable, but currently lacks Studio support.
-      # Once mouse support is merged, switch back to zmkfirmware + main.
-      remote: petejohanson
-      revision: feat/pointers-with-input-processors #https://github.com/zmkfirmware/zmk/pull/2477
+      remote: zmkfirmware
+      revision: main
       import: app/west.yml
     - name: nice-view-gem
       remote: m165437
