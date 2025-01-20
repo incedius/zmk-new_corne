@@ -1,8 +1,9 @@
+#include <dt-bindings/zmk/mouse.h>
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/mouse.h>
 #include <dt-bindings/zmk/outputs.h>
+#include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/rgb.h>
 
 / {
@@ -29,6 +30,8 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             flavor = "hold-preferred";
+            hold-while-undecided;
+            hold-while-undecided-linger;
         };
 
         hml: hml {
@@ -84,11 +87,10 @@
             //                                                      enter
 
             bindings = <
-&tabEsc         &kp Q  &kp W       &kp E      &kp R        &kp T           &kp UP_ARROW     &kp Y                  &kp U        &kp I                 &kp O    &kp P     &kp BSPC
-&kp LEFT_SHIFT  &kp A  &kp S       &kp D      &kp F        &kp G           &kp DOWN_ARROW   &kp H                  &kp J        &kp K                 &kp L    &kp SEMI  &kp SQT
-&kp LCTRL       &kp Z  &kp X       &kp C      &kp V        &kp B           &kp LEFT_ARROW   &kp N                  &kp M        &kp COMMA             &kp DOT  &kp FSLH  &shiftCaps
-                       &kp C_MUTE  &guiLayer  &lt 2 SPACE  &lt 4 DELETE    &kp RIGHT_ARROW  &hm RIGHT_SHIFT ENTER  &lt 3 SPACE  &hm RIGHT_ALT DELETE
-                                                                           &kp ENTER
+&tabEsc   &kp Q           &kp W      &kp E    &kp R     &kp T         &kp UP_ARROW  &kp Y           &kp U           &kp I  &kp O  &kp P
+&kp BSPC  &kp LEFT_SHIFT  &kp A      &kp S    &kp D     &kp F         &kp G         &kp DOWN_ARROW  &kp H           &kp J  &kp K  &kp L
+&kp SEMI  &kp SQT         &kp LCTRL  &kp Z    &kp X     &kp C         &kp V         &kp B           &kp LEFT_ARROW  &kp N  &kp M  &kp COMMA
+                                     &kp DOT  &kp FSLH  &shiftCaps    &kp C_MUTE    &guiLayer       &lt 2 SPACE
             >;
 
             label = "QWERTY";
@@ -97,11 +99,10 @@
 
         ColemakDH {
             bindings = <
-&trans  &kp Q  &kp W   &kp F   &kp P   &kp B     &trans  &kp J   &kp L   &kp U   &kp Y   &kp SEMI  &trans
-&trans  &kp A  &kp R   &kp S   &kp T   &kp G     &trans  &kp M   &kp N   &kp E   &kp I   &kp O     &trans
-&trans  &kp Z  &kp X   &kp C   &kp D   &kp V     &trans  &kp K   &kp H   &trans  &trans  &trans    &trans
-               &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans
-                                                 &trans
+&trans  &kp Q   &kp W   &kp F   &kp P   &kp B                &trans  &kp J   &kp L   &kp U               &kp Y  &kp SEMI
+&trans  &trans  &kp A   &kp R   &kp S   &hml LEFT_SHIFT T    &kp G   &trans  &kp M   &hmr RIGHT_SHIFT N  &kp E  &kp I
+&kp O   &trans  &trans  &kp Z   &kp X   &kp C                &kp D   &kp V   &trans  &kp K               &kp H  &trans
+                        &trans  &trans  &trans               &trans  &trans  &trans
             >;
 
             label = "ColemakDH";
@@ -117,11 +118,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp GRAVE  &kp N1     &kp N2           &kp N3            &kp N4             &kp N5    &kp PAGE_UP      &kp N6     &kp N7    &kp N8    &kp N9     &kp N0          &trans
-&trans     &kp LC(A)  &trans           &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans    &kp PAGE_DOWN    &kp MINUS  &kp LEFT  &kp UP    &kp RIGHT  &trans          &kp BACKSLASH
-&trans     &kp LC(Z)  &kp LC(X)        &kp LC(C)         &kp LC(V)          &trans    &kp HOME         &kp EQUAL  &trans    &kp DOWN  &trans     &kp SCROLLLOCK  &kp PAUSE_BREAK
-                      &rgb_ug RGB_TOG  &trans            &trans             &trans    &kp END          &trans     &trans    &trans
-                                                                                      &kp PRINTSCREEN
+&kp TAB  &kp N1         &kp N2     &kp N3     &kp N4            &kp N5               &kp PAGE_UP      &kp N6         &kp N7     &kp N8     &kp N9  &kp N0
+&trans   &trans         &kp LC(A)  &kp LC(S)  &kp LEFT_BRACKET  &kp RIGHT_BRACKET    &kp GRAVE        &kp PAGE_DOWN  &kp MINUS  &kp LEFT   &kp UP  &kp RIGHT
+&trans   &kp BACKSLASH  &trans     &kp LC(Z)  &kp LC(X)         &kp LC(C)            &kp LC(V)        &trans         &kp HOME   &kp EQUAL  &trans  &kp DOWN
+                                   &trans     &kp SCROLLLOCK    &kp PAUSE_BREAK      &rgb_ug RGB_TOG  &trans         &trans
             >;
 
             label = "NUMBER";
@@ -130,11 +130,10 @@
 
         SYMBOLS {
             bindings = <
-&kp TILDE  &kp EXCLAMATION  &kp AT_SIGN      &kp HASH        &kp DOLLAR       &kp PERCENT    &kp PAGE_UP      &kp CARET  &kp AMPERSAND  &kp ASTERISK    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans
-&trans     &kp LC(A)        &trans           &kp LEFT_BRACE  &kp RIGHT_BRACE  &trans         &kp PAGE_DOWN    &kp UNDER  &kp LEFT       &kp UP_ARROW    &kp RIGHT             &trans                 &kp PIPE
-&trans     &kp LC(Z)        &kp LC(X)        &kp LC(C)       &kp LC(V)        &trans         &kp HOME         &kp PLUS   &trans         &kp DOWN_ARROW  &trans                &trans                 &trans
-                            &rgb_ug RGB_TOG  &trans          &trans           &trans         &kp END          &trans     &trans         &trans
-                                                                                             &kp PRINTSCREEN
+&trans  &kp EXCLAMATION  &kp AT_SIGN  &kp HASH   &kp DOLLAR      &kp PERCENT        &kp PAGE_UP      &kp CARET      &kp AMPERSAND  &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
+&trans  &trans           &kp LC(A)    &kp LC(S)  &kp LEFT_BRACE  &kp RIGHT_BRACE    &kp TILDE        &kp PAGE_DOWN  &kp UNDER      &kp LEFT      &kp UP_ARROW          &kp RIGHT
+&trans  &kp PIPE         &trans       &kp LC(Z)  &kp LC(X)       &kp LC(C)          &kp LC(V)        &trans         &kp HOME       &kp PLUS      &trans                &kp DOWN_ARROW
+                                      &trans     &trans          &trans             &rgb_ug RGB_TOG  &trans         &trans
             >;
 
             label = "SYMBOLS";
@@ -144,11 +143,10 @@
         Fn {
             display-name = "Fn";
             bindings = <
-&kp LA(TAB)  &kp F1  &kp F2     &kp F3  &kp F4  &kp F5     &trans   &kp F6     &kp F7    &kp F8    &kp F9     &kp F10         &trans
-&trans       &trans  &trans     &trans  &trans  &kp F11    &trans   &mkp RCLK  &kp LEFT  &kp UP    &kp RIGHT  &trans          &trans
-&trans       &trans  &trans     &trans  &trans  &kp F12    &trans   &mkp MB4   &mkp MB5  &kp DOWN  &trans     &kp SCROLLLOCK  &kp PAUSE_BREAK
-                     &mkp MCLK  &trans  &trans  &trans     &trans   &trans     &trans    &trans
-                                                           &mkp LCLK
+&kp LA(TAB)  &kp F1  &kp F2  &kp F3  &kp F4          &kp F5             &trans     &kp F6   &kp F7     &kp F8    &kp F9    &kp F10
+&trans       &trans  &trans  &trans  &trans          &trans             &kp F11    &trans   &mkp RCLK  &kp LEFT  &kp UP    &kp RIGHT
+&trans       &trans  &trans  &trans  &trans          &trans             &trans     &kp F12  &trans     &mkp MB4  &mkp MB5  &kp DOWN
+                             &trans  &kp SCROLLLOCK  &kp PAUSE_BREAK    &mkp MCLK  &trans   &trans
             >;
 
             label = "FN";
@@ -165,35 +163,24 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans      &trans        &trans        &trans        &trans        &to 0           &rgb_ug RGB_HUI  &to 1   &trans       &trans      &trans  &trans  &trans
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &rgb_ug RGB_HUD  &trans  &trans       &trans      &trans  &trans  &trans
-&trans      &out OUT_USB  &out OUT_BLE  &sys_reset    &bootloader   &trans          &rgb_ug RGB_SAD  &trans  &bootloader  &sys_reset  &trans  &trans  &trans
-                          &trans        &trans        &trans        &trans          &rgb_ug RGB_SAI  &trans  &trans       &trans
-                                                                                    &rgb_ug RGB_EFF
+&trans  &trans      &trans        &trans        &trans        &to 0           &rgb_ug RGB_HUI  &to 1            &trans           &trans  &trans       &trans
+&trans  &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3    &bt BT_SEL 4     &rgb_ug RGB_HUD  &trans           &trans  &trans       &trans
+&trans  &trans      &trans        &out OUT_USB  &out OUT_BLE  &sys_reset      &bootloader      &trans           &rgb_ug RGB_SAD  &trans  &bootloader  &sys_reset
+                                  &trans        &trans        &trans          &trans           &trans           &trans
             >;
 
             sensor-bindings = <&rgb_encoder>;
         };
 
-        layer_1 {
-            status = "reserved";
-        };
+        layer_1 { status = "reserved"; };
 
-        layer_2 {
-            status = "reserved";
-        };
+        layer_2 { status = "reserved"; };
 
-        layer_3 {
-            status = "reserved";
-        };
+        layer_3 { status = "reserved"; };
 
-        starcraft {
-            status = "reserved";
-        };
+        starcraft { status = "reserved"; };
 
-        layer_5 {
-            status = "reserved";
-        };
+        layer_5 { status = "reserved"; };
     };
 
     conditional_layers {
